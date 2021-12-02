@@ -2,48 +2,37 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
+import { FaOpencart } from "react-icons/fa";
 
 export default function TheNavbar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="wight" variant="light">
       <Container>
-        {/* as={Link} means use react-router's Link component under the hood */}
-        <Navbar.Brand as={Link} to="/">
-          Bit Commerce
+        <Navbar.Brand style={{ color: "#ffa69ee8;" }} as={Link} to="/home">
+          Perfume
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav ">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/products">
-              Products
+            <Nav.Link as={Link} to="/women">
+              Women's
             </Nav.Link>
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title="Categories"
-              menuVariant="dark"
-            >
-              <NavDropdown.Item as={Link} to="/categories/*">
-                Category 1
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/categories/*">
-                Category 2
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/categories/*">
-                Category 3
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/categories">
-                All Categories
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as={Link} to="/men">
+              Men's
+            </Nav.Link>
+            <Nav.Link as={Link} to="/products">
+              Brand's
+            </Nav.Link>
           </Nav>
 
-          <Nav>
+          <Nav className="navs">
+            <Nav.Link as={Link} to="/cart">
+              <FaOpencart />
+            </Nav.Link>
             <Nav.Link as={Link} to="/login">
               login
             </Nav.Link>

@@ -57,9 +57,14 @@ export default function Login() {
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Remember me" />
           </Form.Group>
-          <Button variant="primary" onClick={() => dispatch(login(user))}>
+          <Button
+            className="btn"
+            variant="primary"
+            onClick={() => dispatch(login(user))}
+          >
             Login
           </Button>
+
           <Button variant="primary" onClick={() => dispatch(logout())}>
             Logout
           </Button>

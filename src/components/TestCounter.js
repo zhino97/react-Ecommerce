@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { increment, decrement, incrementByValue } from "../features/countSlice";
+
 export default function MainCounter() {
   // Local number state
   const [number, setNumber] = useState(0);

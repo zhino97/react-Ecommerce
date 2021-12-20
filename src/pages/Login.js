@@ -31,46 +31,47 @@ export default function Login() {
   };
 
   return (
-    <>
-      <Container>
-        <Form className="mt-5">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Enter email"
-              onChange={handleEmail}
-            />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Password"
-              onChange={handlePassword}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Remember me" />
-          </Form.Group>
-          <Button
-            className="btn"
-            variant="primary"
-            onClick={() => dispatch(login(user))}
-          >
-            Login
-          </Button>
-
-          <Button variant="primary" onClick={() => dispatch(logout())}>
-            Logout
-          </Button>
-        </Form>
-        {globalUser.email}
-      </Container>
-    </>
+    <Container>
+      <Form className="mt-5 ">
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <h2>Login Form</h2>
+          <br />
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            className="inputF"
+            type="email"
+            placeholder="Enter email"
+            onChange={handleEmail}
+          />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            className="inputF"
+            type="password"
+            placeholder="Password"
+            onChange={handlePassword}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="Remember me" />
+        </Form.Group>
+        <Button
+          className="btn"
+          variant="primary"
+          onClick={() => dispatch(login(user))}
+        >
+          Login
+        </Button>
+        &nbsp; &nbsp;
+        <Button variant="primary" onClick={() => dispatch(logout())}>
+          Logout
+        </Button>
+      </Form>
+      {globalUser.email}
+    </Container>
   );
 }

@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 function TheCaroucel() {
   return (
     <div>
-      <Carousel>
+      {/* <Carousel>
         <Carousel.Item interval={500}>
           <img
             className="d-block w-100  imgC"
-            src="https://images.pexels.com/photos/4110339/pexels-photo-4110339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            src="https://cdn.crello.com/api/media/medium/441265486/stock-photo-cropped-view-woman-holding-bottle?token="
             alt="Second slide"
           />
           <Carousel.Caption>
-            <Link to="">
+            <Link to="/thecards">
               <button className="btn">Shop Now</button>
             </Link>
             <h3>Second slide label</h3>
@@ -23,7 +23,7 @@ function TheCaroucel() {
         <Carousel.Item>
           <img
             className="d-block w-100  imgC"
-            src="https://images.pexels.com/photos/136651/pexels-photo-136651.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            src="https://cdn.crello.com/api/media/medium/194435982/stock-photo-hand-holding-stylish-bottle-perfume?token="
             alt="Third slide"
           />
           <Carousel.Caption>
@@ -36,7 +36,12 @@ function TheCaroucel() {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
+      <div className="divBack2">
+        <div className="divBackground">
+          <h1 className="textD">Welcom to World of Perfume</h1>
+        </div>
+      </div>
     </div>
   );
 }

@@ -9,39 +9,37 @@ export default class Register extends Component {
         <form>
           {" "}
           <br />
-          <h3>Register</h3>
+          <h2>Register Form</h2>
+          <br />
           <div className="form-group">
             <label>First name</label>
             <input
               type="text"
-              className="form-control"
+              className="form-control inputF"
               placeholder="First name"
             />
           </div>
-          <br />
           <div className="form-group">
             <label>Last name</label>
             <input
               type="text"
-              className="form-control"
+              className="form-control inputF"
               placeholder="Last name"
             />
           </div>
-          <br />
           <div className="form-group">
             <label>Email</label>
             <input
               type="email"
-              className="form-control"
+              className="form-control inputF"
               placeholder="Enter email"
             />
           </div>
-          <br />
           <div className="form-group">
             <label>Password</label>
             <input
               type="password"
-              className="form-control"
+              className="form-control inputF"
               placeholder="Enter password"
             />
           </div>
@@ -53,8 +51,9 @@ export default class Register extends Component {
           >
             Register
           </button>
-          <p className="forgot-password text-right">
-            Already registered <Link to="login">log in?</Link>
+          <br />
+          <p className="forgot-password text-left ">
+            Already registered <Link to="/login">log in?</Link>
           </p>
         </form>
       </Container>
